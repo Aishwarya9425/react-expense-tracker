@@ -2,12 +2,20 @@ import { ExpenseInput } from "containers/ExpenseInput/ExpenseInput";
 import s from "./style.module.css";
 import { ExpenseList } from "containers/ExpenseList/ExpenseList";
 import { IncomeInput } from "containers/IncomeInput/IncomeInput";
-
+import { ExpenseTotal } from "containers/ExpenseTotal/ExpenseTotal";
+import { Logo } from "components/Logo/Logo";
+import G03 from "assets/images/G03.jpg";
 export function App() {
   return (
     <div className={s.main_container}>
       <div className={`row ${s.header}`}>
-        <div className={`col-3`}>Logo</div>
+        <div className={`col-3`}>
+          <Logo
+            title="💰Tracker"
+            subtitle="Lets track your expenses!"
+            // image={G03}
+          />
+        </div>
         <div className={`col-9 ${s.income_input}`}>
           <IncomeInput />
         </div>
@@ -18,7 +26,9 @@ export function App() {
         </div>
         <div className={`col-11 col-md-6 col-lg-4 ${s.expense_list}`}>
           <ExpenseList />
-          <div className={`col-12 ${s.expense_total}`}>Expense Total</div>
+          <div className={`col-12 ${s.expense_total}`}>
+            <ExpenseTotal />
+          </div>
         </div>
       </div>
     </div>

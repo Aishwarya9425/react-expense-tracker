@@ -5,6 +5,7 @@ export function Logo({ image, title, subtitle }) {
     <>
       <div className={s.container}>
         {image && <img className={s.img} src={image} alt="logo" />}
+        {/* <img className={s.img} src={image} alt="logo" /> */}
         <h1 className={s.title}>{title}</h1>
       </div>
       <h2 className={s.subtitle}>{subtitle}</h2>
